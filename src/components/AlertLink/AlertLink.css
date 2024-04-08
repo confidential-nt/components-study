@@ -1,0 +1,19 @@
+.alert.primary .alertLink {
+  color: rgb(18, 83, 148);
+  text-decoration: underline;
+}
+
+.alert.secondary .alertLink {
+  color: rgb(61, 61, 61);
+  text-decoration: underline;
+}
+
+.alert.success .alertLink {
+  color: rgb(0, 78, 0);
+  text-decoration: underline;
+}
+
+.alert.danger .alertLink {
+  color: rgb(158, 62, 45);
+  text-decoration: underline;
+}

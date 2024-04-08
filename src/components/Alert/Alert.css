@@ -1,0 +1,25 @@
+.alert {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.alert.primary {
+  background-color: dodgerblue;
+  border: 1px solid blue;
+}
+
+.alert.secondary {
+  background-color: grey;
+  border: 1px solid black;
+}
+
+.alert.success {
+  background-color: green;
+  border: 1px solid rgb(0, 74, 0);
+}
+
+.alert.danger {
+  background-color: tomato;
+  border: 1px solid red;
+}
