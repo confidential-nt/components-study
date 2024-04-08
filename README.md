@@ -4,4 +4,5 @@ React Bootstrap을 참고하여 배운 내용을 응용하여 실제 컴포넌�
 
 ### 만들어 볼 컴포넌트 목록
 
-- [ ] Alert
+- [x] Alert
+- [ ] Modal
