@@ -1,26 +1,41 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./App.css";
-import Alert from "./components/Alert/Alert";
+
+import Modal from "./components/Modal/Modal";
 
 function App() {
-  const [show, setShow] = useState<boolean>(true);
-  const alertRef = useRef<HTMLDivElement>(null);
+  const [show, setShow] = useState<boolean>(false);
 
   return (
     <main>
-      <Alert
+      <button onClick={() => setShow(true)}>모달 보기</button>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+        cupiditate error esse excepturi totam labore expedita repellendus,
+        dolorum quasi velit adipisci similique, quidem quis? Quidem assumenda
+        odit quae pariatur sed.
+      </p>
+      <Modal
         show={show}
-        onClose={() => setShow(false)}
-        variant="danger"
-        dismissible
-        ref={alertRef}
+        onHide={() => setShow(false)}
+        centered
+        animation={false}
+        aria-labelledby="modal"
       >
-        <Alert.Heading>경고문</Alert.Heading>
-        <p>
-          배가 고파요
-          <Alert.Link href="#">요기요</Alert.Link>
-        </p>
-      </Alert>
+        <>
+          <Modal.Header closeButton>
+            <Modal.Title id="modal">이것은 모달이다.</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <h1>모달 본문.</h1>
+            <input type="text" placeholder="내용을 입력하세요." autoFocus />
+          </Modal.Body>
+          <Modal.Footer>
+            <button onClick={() => setShow(false)}>확인</button>
+            <button onClick={() => setShow(false)}>취소</button>
+          </Modal.Footer>
+        </>
+      </Modal>
     </main>
   );
 }

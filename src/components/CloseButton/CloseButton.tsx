@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./CloseButton.module.css";
+import "./CloseButton.css";
 import classNames from "classnames";
 
 export interface CloseButtonProps extends HTMLAttributes<HTMLButtonElement> {}
@@ -13,7 +13,7 @@ export default function CloseButton({
     <button
       onClick={onClick}
       {...props}
-      className={classNames(className, styles.closeButton)}
+      className={classNames(className, "closeButton")}
     >
       x
     </button>
